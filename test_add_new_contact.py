@@ -4,6 +4,7 @@ from selenium.webdriver.support.ui import Select
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import NoAlertPresentException
 import unittest
+from contact import Contact
 
 class TestAddNewContact(unittest.TestCase):
 
@@ -15,7 +16,7 @@ class TestAddNewContact(unittest.TestCase):
     def test_add_new_contact(self):
         wd = self.wd
         self.open_home_page(wd)
-        self.login(wd)
+        self.login(wd, username="admin", password="secret")
         self.add_info(wd)
         self.add_telefon_number(wd)
         self.add_data(wd)
@@ -94,12 +95,12 @@ class TestAddNewContact(unittest.TestCase):
         wd.find_element_by_name("address").clear()
         wd.find_element_by_name("address").send_keys("steret")
 
-    def login(self, wd):
+    def login(self, wd, username, password):
         wd.find_element_by_name("user").clear()
-        wd.find_element_by_name("user").send_keys("admin")
+        wd.find_element_by_name("user").send_keys(username)
         wd.find_element_by_name("pass").click()
         wd.find_element_by_name("pass").clear()
-        wd.find_element_by_name("pass").send_keys("secret")
+        wd.find_element_by_name("pass").send_keys(password)
         wd.find_element_by_xpath("//input[@value='Login']").click()
 
     def open_home_page(self, wd):
