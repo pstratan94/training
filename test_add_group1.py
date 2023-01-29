@@ -25,3 +25,4 @@ def test_add_empty_group1(app):
         app.return_to_groups_page()
         app.logout()
 
+
