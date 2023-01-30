@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from contact import Info, Tele
-from application import Webnote
+from fixture.application import Webnote
 import pytest
 
 @pytest.fixture
