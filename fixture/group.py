@@ -4,7 +4,6 @@ class GroupHelper:
     def __init__(self, app):
         self.app = app
 
-
     def open_groups_page(self):
         # open group page
         wd = self.app.wd

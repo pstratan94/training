@@ -26,3 +26,4 @@ def test_add_empty_group1(app):
         app.session.logout()
 
 
+
