@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 from model.group import Group
-from fixture.application import Application
-import pytest
 
 def test_add_group1(app):
         app.open_home_page()
