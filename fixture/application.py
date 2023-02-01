@@ -35,10 +35,8 @@ class Webnote:
         wd = self.wd
         wd.find_element_by_link_text("home page").click()
         wd.find_element_by_xpath("//table[@id='maintable']/tbody/tr[4]/td[7]/a/img").click()
+
     def destroy(self):
         self.wd.quit()
 
-    # def is_element_present(self, how, what):
-       # try: self.wd.find_element(by=how, value=what)
-       # except NoSuchElementException as e: return False
-       # return True
+
