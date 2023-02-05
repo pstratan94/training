@@ -6,10 +6,10 @@ class Group:
 
 class Info:
 
-    def __init__(self, name1, name2, name3, nickname, title, companyname, adress):
-        self.name1 = name1
-        self.name2 = name2
-        self.name3 = name3
+    def __init__(self, firstname, middlename, lastname, nickname, title, companyname, adress):
+        self.firstname = firstname
+        self.middlename = middlename
+        self.lastname = lastname
         self.nickname = nickname
         self.title = title
         self.companyname = companyname
