@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 from model.group import Group
 
-def test_add_group1(app):
+def test_modify_group_name(app):
         app.session.login(username="admin", password="secret")
-        app.group.create(Group(name="test", header="tester", footer="tester"))
+        app.group.modify_first_group(Group(name="New group"))
         app.session.logout()
 
-def test_add_empty_group1(app):
+def test_modify_group_header(app):
         app.session.login(username="admin", password="secret")
-        app.group.create(Group(name="", header="", footer=""))
+        app.group.modify_first_group(Group(name="New header"))
         app.session.logout()

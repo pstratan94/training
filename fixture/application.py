@@ -17,6 +17,10 @@ class Application:
         wd = self.wd
         wd.get("http://localhost/addressbook/")
 
+    def open_groups_page(self):
+        wd = self.app.wd
+        wd.find_element_by_link_text("groups").click()
+
     def return_home_page(self):
         wd = self.wd
         wd.find_element_by_link_text("home page").click()
