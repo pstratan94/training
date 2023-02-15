@@ -26,7 +26,6 @@ class GroupHelper:
     def create(self, group):
         # init group creation
         self.open_groups_page()
-
         wd = self.app.wd
         wd.find_element_by_name("new").click()
         self.fill_group_form(group)
@@ -35,10 +34,8 @@ class GroupHelper:
         self.return_to_groups_page()
 
 
-
     def edit_group(self, group):
         self.open_groups_page()
-
         wd = self.app.wd
         wd.find_element_by_link_text("groups").click()
         # select first group

@@ -1,12 +1,6 @@
 # -*- coding: utf-8 -*-
-from model.group import Info, Tele
+from model.contact import Contact
 
 def test_add_new_contact(app):
-        app.session.login(username="admin", password="secret")
-        app.contact.add_info(Info(firstname="tester", middlename="testerovich", lastname="testovich", nickname="ptest", title="p", companyname="bro", adress="steret"))
-        app.contact.add_telefon_number(Tele(telefon1="1111", telefon2="2222", telefon3="3333", fax="4444", box1="test@p.com", box2="test2@n.com", box3="test3@m.com", url="link"))
-        app.contact.add_data()
-        app.session.logout()
-
-
+        app.contact.add_new_contact(Contact(firstname="tester", middlename="testerovich", lastname="testovich", nickname="ptest", title="p", companyname="bro", adress="steret", telefon1="1111", telefon2="2222", telefon3="3333", fax="4444", box1="test@p.com", box2="test2@n.com", box3="test3@m.com", url="link"))
 
